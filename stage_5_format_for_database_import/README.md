@@ -1,0 +1,2 @@
+# KGEV Stage 5: format for database import
+`format_for_neo4j_import.ipynb` formats the integrated SemRep triples (output of Stage 4) and corresponding nodes (output of Stage 2) into a .csv file that is suitable for Neo4j import using the correct schema for the web application.  
