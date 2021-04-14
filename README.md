@@ -1,6 +1,6 @@
 # kgev-neo4j
 
-KEGV (Knowledge Graph Exploration and Visualization) is a web framework for expediting knowledge acquisition using Knowledge Graph.
+KGEV (Knowledge Graph Exploration and Visualization) is a web framework for expediting knowledge acquisition using Knowledge Graph.
 
 ## Abstract
 
