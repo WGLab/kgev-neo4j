@@ -18,7 +18,7 @@ KEGV (Knowledge Graph Exploration and Visualization) is a web framework for expe
 
 ![image](https://user-images.githubusercontent.com/5926328/114648025-14128c80-9cac-11eb-9f1c-e82df10bb753.png)
 
-**Figure**: Use KGEV to study human disease phenotypes. The entire HPO database of disease-phenotype relationships was stored in a new Neo4j database, following the schema of the COVID-19 database (but without text information). Just by swapping the database, one can use the same user interface to query the KG, but on a different set of data. The figure shows an example of finding the shortest path between polydactyly, syndactyl, and cleft palate phenotypes to determine diseases that share at least two of the three phenotypes.
+**Figure**: Use KGEV to study human disease phenotypes. The entire HPO database of disease-phenotype relationships was stored in a new Neo4j database. Just by swapping the database, one can use the same user interface to query the KG, but on a different set of data. The figure shows an example of finding the shortest path between polydactyly, syndactyl, and cleft palate phenotypes to determine diseases that share at least two of the three phenotypes.
 
 ![image](https://user-images.githubusercontent.com/5926328/114648128-4a500c00-9cac-11eb-9164-af74c22958a4.png)
 
