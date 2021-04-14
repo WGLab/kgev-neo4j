@@ -1,4 +1,28 @@
-# kgev-neo4j  
+# kgev-neo4j
+
+KEGV (Knowledge Graph Exploration and Visualization) is a web framework for expediting knowledge acquisition using Knowledge Graph.
+
+## Abstract
+
+**Background**: Knowledges graphs (KGs) serve as a convenient framework for structuring knowledge. A number of computational methods have been developed to generate KGs from biomedical literature and use them for downstream tasks such as link prediction and questioning and answering. However, there is a lack of computational tools or web frameworks to support the exploration and visualization of the KG themselves, which would facilitate interactive knowledge discovery and formulation of novel biological hypotheses. 
+
+**Method**: We developed a web framework for Knowledge Graph Exploration and Visualization (KGEV), to construct and visualize KGs in five stages: triple extraction, triple filtration, metadata preparation, knowledge integration, and graph database presentation. The application has convenient user interface tools such as node and edge search and filtering, data source filtering, neighborhood retrieval, shortest path calculation, by querying a backend graph database. Unlike other KGs, our framework allows fast retrieval of relevant texts supporting the relationships in the KG, thus allowing human reviewers to judge the reliability of the knowledge extracted. 
+
+**Results**: We demonstrated a case study of using the KGEV framework to perform research on COVID-19. The COVID-19 pandemic resulted in an explosion of relevant literature, making it challenging to make full use of the vast and heterogenous sources of information. We generated a COVID-19 KG with heterogenous information, including literature information from the CORD-19 dataset, as well as other existing knowledge from eight data sources. We showed the utility of KGEV in three intuitive case studies to explore and query knowledge on COVID-19. A demo of this web application can be accessed at http://covid19nlp.wglab.org. Finally, we also demonstrated a turn-key adaption of the KGEV framework to study clinical phenotypic presentation of human diseases, illustrating the versatility of the framework. 
+
+**Conclusion**: In an era of literature explosion, the KGEV framework can be applied to many emerging diseases to support structured navigation of the vast amount of newly published biomedical literature and other existing biological knowledge in various databases. It can be also used as a general-purpose tool to explore and query gene-phenotype-disease-drug relationships interactively.
+
+## Examples of web interface
+
+**Figure**: Web application user interface. 1) The left panel is a graph view that shows the nodes and edges returned from a search. Nodes and edges are labelled and color-coded for an effective user experience. A node can be clicked on to return more information on the entity, such as its UMLS concept Unique Identifier (CUI), semantic group(s), and synonyms. Clicking an edge will bring up information on the triple, including the supporting texts, in the panel on the right, which the image demonstrates. 2) In addition to viewing the search results as a graph, one can use the list view to view the same nodes and edges in a table, which can be sorted. 3) The right panel will show information on the triple that was clicked on. The head, relationship, and tail of the triple are color-coded in the text for easy interpretation. Metadata information of the text can be seen by clicking “Paper details”. Covering over highlighted text shows more information about the entity. 4) The right panel also has a tab to do the actual search. One can select the type of search, the node to search for, whether or not to use fuzzy search, what node filters to use, as well as 5) what edge filters to use, the edge direction, what data sources to use, and how many supporting texts are required.
+
+![image](https://user-images.githubusercontent.com/5926328/114648025-14128c80-9cac-11eb-9f1c-e82df10bb753.png)
+
+**Figure**: Use KGEV to study human disease phenotypes. The entire HPO database of disease-phenotype relationships was stored in a new Neo4j database, following the schema of the COVID-19 database (but without text information). Just by swapping the database, one can use the same user interface to query the KG, but on a different set of data. The figure shows an example of finding the shortest path between polydactyly, syndactyl, and cleft palate phenotypes to determine diseases that share at least two of the three phenotypes.
+
+![image](https://user-images.githubusercontent.com/5926328/114648128-4a500c00-9cac-11eb-9164-af74c22958a4.png)
+
+
 
 ### KGEV pipeline  
 The different stages of the pipeline are represented by the different sub-directories. Separate README files are in each sub-directory to explain each stage of the pipeline.    
@@ -99,7 +123,7 @@ The Neo4J database should be completely up and running now.
 
 
 ### Setting up the Frontend and the Backend
-To run the frontend of the KGEV web applcation use the [genomicslab/kgev-frontend](https://hub.docker.com/repository/docker/genomicslab/kgev-frontend) Docker container.  
-Similarly, to run the backend of the KGEV web applcation use the [genomicslab/kgev-backend](https://hub.docker.com/repository/docker/genomicslab/kgev-backend) Docker container.  
+To run the frontend of the KGEV web applcation use the [genomicslab/kgev-frontend](https://hub.docker.com/r/genomicslab/kgev-frontend) Docker container.  
+Similarly, to run the backend of the KGEV web applcation use the [genomicslab/kgev-backend](https://hub.docker.com/r/genomicslab/kgev-backend) Docker container.  
 
 
