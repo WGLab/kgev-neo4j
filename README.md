@@ -27,6 +27,8 @@ KGEV (Knowledge Graph Exploration and Visualization) is a web framework for expe
 ### KGEV pipeline  
 The different stages of the pipeline are represented by the different sub-directories. Separate README files are in each sub-directory to explain each stage of the pipeline.    
 
+Instead of running Stage 1 to extract triples from literature (i.e. applying SemRep on CORD-19 abstracts), you can download [semrep_relationships.csv](https://drive.google.com/file/d/1OpqYHsc6GaNLiQh-n9aSkSJ112MJktfU/view?usp=sharing) and place it in a sub-directory called `data` directly within the root directory of this project. `semrep_relationships.csv` is the file that is outputted from Stage 1 of the KGEV pipeline.   
+
 ### Setting up the Neo4j database
 
 On the server you want to run Neo4j on, make sure Docker is installed. Once this is done, navigate to your home directory on the server. Run the following bash commands to create the relevant folders for running Neo4j.    
@@ -40,7 +42,7 @@ mkdir neo4j/plugins
 
 Move the .csv files outputted by the KGEV pipeline in the `NEO4J_OUTPUT_DIR` into neo4j/import.  
 
-Then run the following lines in the terminal (replacing [NEO4J_USERNAME and [NEO4J_PASSWORD] with their true values). This creates a Docker container called `kgev-neo4jj` that runs Neo4j.   
+Then run the following lines in the terminal (replacing [NEO4J_USERNAME and [NEO4J_PASSWORD] with their true values). This creates a Docker container called `kgev-neo4j` that runs Neo4j.   
 
 ```
 docker run \
